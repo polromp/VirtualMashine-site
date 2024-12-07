@@ -1,0 +1,2 @@
+Предел функции в точке — это значение, к которому стремитcя функция при приближении аргумента к данной точке.  
+   The limit of a function at a point is the value that the function approaches as the argument approaches that point.

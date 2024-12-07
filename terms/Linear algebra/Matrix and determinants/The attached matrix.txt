@@ -1,0 +1,2 @@
+Присоединённая матрица - это матрица, составленная из алгебраических дополнений данной матрицы и транспонирования.
+An attached matrix is a matrix composed of algebraic additions of a given matrix and transposition.

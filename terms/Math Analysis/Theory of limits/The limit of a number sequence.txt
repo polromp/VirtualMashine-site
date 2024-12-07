@@ -1,0 +1,2 @@
+Предел числовой последовательности — это значение, к которому стремится последовательность при бесконечном увеличении индекса.  
+The limit of a sequence is the value the sequence approaches as the number of terms goes to infinity. 

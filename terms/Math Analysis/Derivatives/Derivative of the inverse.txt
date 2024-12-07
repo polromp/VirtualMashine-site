@@ -1,0 +1,2 @@
+Производная обратной функции связана с производной исходной функции через формулу: (f^(-1))'(y) = 1/f'(x), где y = f(x).  
+Derivative of the inverse function is related to the derivative of the original function by the formula: (f^(-1))'(y) = 1/f'(x), where y = f(x).

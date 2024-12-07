@@ -1,0 +1,2 @@
+Дифференциалом n-го порядка функции y=f(x) называется дифференциал от дифференциала (n−1)-го порядка этой функции, то есть dny=d(dn-1y).
+Differential of n-th order of function y = f(x) is differential of its (n−1)−th differential: dny=d(dn-1y).

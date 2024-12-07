@@ -1,0 +1,2 @@
+Интегральная кривая — это график первообразной функции или график определённого интеграла функции на заданном интервале. Она показывает, как меняется значение первообразной функции в зависимости от изменения аргумента. 
+An integral curve is the graph of an antiderivative function or the graph of the definite integral of a function over a given interval. It illustrates how the value of the antiderivative changes with respect to changes in its argument. 

@@ -1,0 +1,2 @@
+Экстремум функции — это максимальное или минимальное значение функции на определённом интервале или в определённой области.  
+An extremum of a function is a maximum or minimum value of the function over a certain interval or domain.

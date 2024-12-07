@@ -1,0 +1,2 @@
+Нижний и верхний пределы интегрирования — это значения, между которыми вычисляется определённый интеграл функции. Нижний предел обозначается буквой a, а верхний предел — буквой b. Эти пределы определяют интервал на числовой оси, в пределах которого производится интегрирование. 
+The lower and upper limits of integration are values between which the definite integral of a function is computed. The lower limit is denoted by a, and the upper limit by b. These limits define an interval on the number line over which integration is performed. 

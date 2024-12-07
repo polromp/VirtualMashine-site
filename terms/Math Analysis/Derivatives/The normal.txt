@@ -1,0 +1,2 @@
+Нормаль к графику функции в точке — это прямая, перпендикулярная касательной в этой точке.  
+The normal to the graph of a function at a point is a line perpendicular to the tangent at that point.

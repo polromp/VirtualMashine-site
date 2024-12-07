@@ -1,0 +1,2 @@
+Бесконечно большая величина – это переменная величина, которая в процессе изменения становится и остается больше по абсолютной величине, чем любое предварительно заданное число.
+Infinitely large quantity is a variable quantity that during a given process of variation becomes and remains greater in absolute value than any preassigned number.

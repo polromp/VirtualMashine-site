@@ -1,0 +1,2 @@
+Два геометрических вектора называют коллинеарными, если они лежат на одной прямой или на параллельных прямых.
+Two geometric vectors are called collinear if they lie on the same straight line or on parallel lines.

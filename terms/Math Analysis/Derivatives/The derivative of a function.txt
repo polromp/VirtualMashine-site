@@ -1,0 +1,2 @@
+Производной функции 𝒚 = 𝒇(𝒙) в точке 𝒙𝟎 называется предел отношений приращения функции к приращению аргумента, когда приращение аргумента стремится к нулю.
+The derivative of a function 𝒚 = 𝒇(𝒙) at a point 𝒙𝟎 is the limit of the ratio of the increment of the function to the increment of the argument when the increment of the argument tends to zero.

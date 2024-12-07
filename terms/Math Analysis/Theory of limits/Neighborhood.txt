@@ -1,0 +1,2 @@
+Окрестность точки — это множество всех точек, которые находятся на малом расстоянии от данной точки.  
+A neighborhood of a point is the set of all points that are at a small distance from that point.

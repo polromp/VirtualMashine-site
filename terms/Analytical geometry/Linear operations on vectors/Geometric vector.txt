@@ -1,0 +1,2 @@
+Геометрическим вектором(также направленным отрезком) называют любой отрезок, на котором выбрано одно из двух возможных направлений.
+A geometric vector (also a directional segment) is any segment on which one of two possible directions is selected.

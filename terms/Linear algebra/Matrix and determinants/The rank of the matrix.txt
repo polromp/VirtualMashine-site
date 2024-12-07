@@ -1,0 +1,2 @@
+Ранг матрицы - максимальный порядок отличных от нуля миноров матрицы A.
+The rank of the matrix is the maximum order of non-zero minors of the matrix A.

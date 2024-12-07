@@ -1,0 +1,2 @@
+Числовой промежуток — это множество всех чисел между двумя заданными числами.  
+A numerical interval is the set of all numbers between two given numbers.

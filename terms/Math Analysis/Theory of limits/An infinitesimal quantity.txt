@@ -1,0 +1,2 @@
+Бесконечно малая величина – это переменная величина, которая стремится к пределу, равному нулю.
+An infinitesimal quantity is a variable quantity that approaches a limit equal to zero.

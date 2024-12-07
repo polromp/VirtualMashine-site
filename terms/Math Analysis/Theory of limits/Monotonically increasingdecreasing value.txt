@@ -1,0 +1,2 @@
+Монотонно возрастающая величина — это величина, которая не уменьшается; монотонно убывающая — не увеличивается.  
+A monotonically increasing quantity is one that does not decrease; a monotonically decreasing quantity does not increase.

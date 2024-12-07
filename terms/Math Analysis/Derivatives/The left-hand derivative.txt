@@ -1,0 +1,2 @@
+Левосторонняя производная функции в точке — это предел отношения изменения функции к изменению аргумента при приближении к точке слева.  
+The left-hand derivative of a function at a point is the limit of the ratio of the change in the function to the change in the argument as it approaches the point from the left.

@@ -1,0 +1,2 @@
+Матрица - это прямоугольная таблица, образованная из элементов некоторого множества и состоящая из m строк и n столбцов.
+A matrix is a rectangular table formed from elements of a certain set and consisting of m rows and n columns.

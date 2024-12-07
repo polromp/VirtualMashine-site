@@ -1,0 +1,3 @@
+Функция называется дифференцируемой в точке, если существует её производная в этой точке.  
+A function is said to be differentiable at a point if its derivative exists at that point.
+ 

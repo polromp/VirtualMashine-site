@@ -1,0 +1,2 @@
+Переменной величиной называется величина, которая в процессе какого-либо явления принимает хотя бы два числовых значения.
+A variable quantity is a value that takes at least two numerical values during the investigation of some process.

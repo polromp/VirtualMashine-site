@@ -1,0 +1,2 @@
+Асимптота графика функции — это прямая, к которой график функции стремится при бесконечном увеличении или уменьшении аргумента (вертикальные, наклонные и т.д.).  
+An asymptote of a function's graph is a line that the graph approaches as the argument increases or decreases indefinitely (vertical, oblique, etc.).
