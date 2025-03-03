@@ -26,11 +26,38 @@
         .btn-group {
             margin-bottom: 15px;
         }
+        header {
+            background-color: #F3F7FF; 
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+        }   
+        .header1 h1 {
+            margin: 0;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            color: black;
+            text-decoration: none;
+            
+        }
+        .header1 h1:hover{
+            text-decoration: underline;
+        }
+        header .user-info {
+            display: flex;
+            align-items: center;
+        }
+        body{
+            background: radial-gradient(circle, #B6D0E2, #7FB3D5, #549DC7);
+            font-family: 'Poppins', sans-serif;
+        }
     </style>
 </head>
 <body>
     <div class="form-container">
-        <h1>EnglishMath</h1>
+        <a class="header1" href="index.php"><h1>EnglishMath</h1></a>
         <div class="card p-4 shadow-sm">
             <form action="login.php" method="POST">
                 <div class="mb-3">

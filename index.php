@@ -1,9 +1,17 @@
 <?php
-// Проверяем, существует ли кука 'username'
 session_start();
 
-// Получаем имя пользователя из куки
-$username = isset($_COOKIE['username']) ? $_COOKIE['username'] : null;
+if (isset($_COOKIE['username'])) {
+    if ($_COOKIE['username'] == "admin") {
+        $username = "admin";
+    } else {
+        $username = $_COOKIE['username']; 
+    }
+} else {
+    $username = null; 
+}
+
+//$username = isset($_COOKIE['username']) ? $_COOKIE['username'] : $_COOKIE['username'] == "admin" ? "admin" : null;
 ?>
 
 <!DOCTYPE html>
@@ -13,28 +21,30 @@ $username = isset($_COOKIE['username']) ? $_COOKIE['username'] : null;
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>EnglishMath</title>
 <style>
-body {
-    font: 16px/1.5 "Arial", sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #F3F7FF; 
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+body{
+    background: radial-gradient(circle, #B6D0E2, #7FB3D5, #549DC7);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+
 header {
-    background-color: #F3F7FF; 
+    background-color: #549DC7; 
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #ddd;
+    margin-top: 0px;
+    width: 100%;
 }
 
 header h1 {
     margin: 0;
     font-size: 1.8rem;
+    font-family: 'Courier New', Courier, monospace;
 }
 /* Шапка */
 header .user-info {
@@ -67,7 +77,7 @@ main {
     margin: 0 auto;
     width: 80%;
     max-width: 600px;
-    margin-bottom: 40px; /* Increased margin below search bar */
+    margin-bottom: 40px;
 }
 
 .search-bar input {
@@ -77,7 +87,6 @@ main {
     border-radius: 5px 0 0 5px;
 }
 
-/* Заголовок разделов */
 .section-title {
     text-align: center;
     margin-bottom: 15px;
@@ -85,12 +94,11 @@ main {
     font-weight: bold;
 }
 
-/* Для кнопок с разделами */
 .section-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 20px;
-    margin-bottom: 40px; /* Increased margin below sections */
+    margin-bottom: 40px; 
 }
 
 .section-item {
@@ -101,21 +109,21 @@ main {
     display: flex;
     align-items: center; 
     justify-content: flex-start; 
-    transition: background-color 0.3s ease; /* Add transition for smooth effect */
+    transition: background-color 0.3s ease; 
 }
 
 .section-wrapper { 
-    background-color: #C0D2FF; /* background color */
+    background-color: #B6D0E2; 
     padding: 20px;
-    border-radius: 10px; /* Optional: Rounded corners */
+    border-radius: 10px;
     
-    margin-bottom: 20px; /* Added margin */
+    margin-bottom: 20px; 
     
     
 }
 
 .section-item:hover {
-    background-color: #74c56b; /* Lighter blue on hover */
+    background-color: #74c56b; 
 }
 
 .section-item img {
@@ -124,39 +132,50 @@ main {
     margin-right: 10px;
 }
 
-/* Подвал */
-footer {
-    background-color: #98A1B9; 
-    padding: 30px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-footer a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
- /* Отступы между разделами */
 .spacer {
-        height: 80px; /* Adjust the height as needed */
+        height: 80px;
     }
 .spacer1 {
-        height: 10px; /* Adjust the height as needed */
+        
+        height: 10px; 
+        
+
     }
+.spacer2 {
+    margin-top: 70px;
+    background-color: #B6D0E2;
+    border: 1px;
+    border-radius: 10px;
+    text-align: center;
+    
+}
+.mater-conteiner{
+    display: grid; 
+    grid-template-columns: 30% 30% 30%;
+    justify-items: center;
+    justify-content: center;
+}
+.mater{
+    color: blue;
+    align-content: center;
+    margin: 10px;
+    border: black;
+    width: 300px;
+    margin-bottom: 10px;
+    background-color: #DCFFD8;
+    border-radius: 10px;
+}
 </style>
 </head>
 <body>
     <header>
         <h1>EnglishMath</h1>
         <div class="user-info">
-            <!-- Проверяем, если пользователь авторизован -->
-            <?php if ($username): ?>
+            <?php if ($username == "admin"): ?>
+                <a href="admin.php">
+                    <img src="photos/icon.png" class="user-icon" width="24" height="24">
+                </a>
+            <?php elseif ($username): ?>
                 <a href="profile.php">
                     <img src="photos/icon.png" class="user-icon" width="24" height="24">
                 </a>
@@ -165,6 +184,7 @@ footer a:hover {
                     <img src="photos/icon.png" class="user-icon" width="24" height="24">
                 </a>
             <?php endif; ?>
+
             <span><?php echo $username ? 'Привет, ' . htmlspecialchars($username) : 'Привет, Гость'; ?></span>
         </div>
     </header>
@@ -172,7 +192,7 @@ footer a:hover {
     <main>
         <div class="spacer"></div>
         <div class="main-content">
-            <p style="font-family: 'Garamond'; font-size: 30px; color: #38c528;"><strong>Знания — это ключ к вашему успеху, и мы поможем вам открыть все двери.</strong></p>
+            <p style="font-family: 'Garamond'; font-size: 30px; color: black;"><strong>Знания — это ключ к вашему успеху, и мы поможем вам открыть все двери.</strong></p>
         </div>
         <div class="spacer1"></div>
         <div class="search-bar">
@@ -216,26 +236,23 @@ footer a:hover {
     </div>
 
 </div>
-    <div class="spacer1"></div>
+    <div class="spacer2">
         <div class="section-title"><p style="font-family: 'MS Serif'; font-size: 30px;">Полезные статьи</p></div>
-        <ul>
-            <li><a href="https://www.storyofmathematics.com/20th.html">The Story of Mathematics — 20th Century Mathematics</a></li>
-            <li><a href="https://www.livescience.com/38936-mathematics.html">What is mathematics? | Live Science</a></li>
-            <li><a href="https://www.whitman.edu/mathematics/higher_math_online/">Introduction to Higher Mathematics</a></li>
-        </ul>
+            <div class="mater-conteiner">
+                <a class="mater" href="https://www.storyofmathematics.com/20th.html">The Story of Mathematics — 20th Century Mathematics</a>
+                <a class="mater" href="https://www.livescience.com/38936-mathematics.html">What is mathematics? | Live Science</a>
+                <a class="mater" href="https://www.whitman.edu/mathematics/higher_math_online/">Introduction to Higher Mathematics</a>
+                <a class="mater" href="https://mathvault.ca/hub/higher-math/">Foundation of Higher Mathematics</a>
+                <a class="mater" href="https://engblog.ru/mathematics-and-english">Говорим о математике на английском</a>
+                <a class="mater" href="https://mksegment.ru/d/kak-izuchit-matematiku-na-anglijskom-yazyke">Как изучить математику на английском языке</a>
+            </div>
+            
+    </div>
+        
     </main>
-
-    <footer>
-        <div>EnglishMath</div>
-        <div>
-            <a href="#">Личный кабинет</a>
-            <a href="#">Обратная связь</a>
-        </div>
-    </footer>
 </body>
 <script>
     $(document).ready(function () {
-        // Поиск по запросу
         $('#search-input').on('input', function () {
             let query = $(this).val().trim();
             if (query.length > 0) {
@@ -247,23 +264,19 @@ footer a:hover {
             }
         });
 
-        // Переход по клику на элемент в результатах
         $(document).on('click', '#search-results li', function () {
             let path = $(this).data('path');
             if (path) {
-                // Параметры запроса из строки (например, 'discipline=Mathematics&subsection=Linear%20Algebra&term=LinearAlgebra')
                 const urlParams = new URLSearchParams(path.split('?')[1]);
 
                 const discipline = urlParams.get('discipline');
                 const subsection = urlParams.get('subsection');
                 const term = urlParams.get('term');
 
-                // Переход на нужную страницу
                 window.location.href = `termin.php?discipline=${encodeURIComponent(discipline)}&subsection=${encodeURIComponent(subsection)}&term=${encodeURIComponent(term)}`;
             }
         });
 
-        // Скрытие результатов при клике вне области поиска
         $(document).on('click', function (e) {
             if (!$(e.target).closest('.search-bar').length) {
                 $('#search-results').hide();
