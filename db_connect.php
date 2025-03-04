@@ -1,6 +1,6 @@
 <?php
 
-$conn = new mysqli('localhost', 'root', 'root', 'site');
+$conn = new mysqli('db', 'user', '1234', 'site');
 
 if ($conn->connect_error) {
     die("Ошибка подключения к базе данных: " . $conn->connect_error);

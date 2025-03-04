@@ -1,0 +1,36 @@
+version: '2.33.1'
+
+services:
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/var/www/html
+    expose:
+      - 9000
+    depends_on:
+      - db
+
+  nginx:
+    build:
+      context: .
+      dockerfile: Dockerfile.nginx
+    ports:
+      - "8080:80"
+    depends_on:
+      - php
+
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: site
+      MYSQL_USER: user
+      MYSQL_PASSWORD: 1234
+    volumes:
+      - db-data:/var/lib/mysql
+      - ./site.sql:/docker-entrypoint-initdb.d/site.sql
+
+volumes:
+  db-data:
