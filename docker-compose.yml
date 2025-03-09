@@ -20,6 +20,7 @@ services:
       - php
     volumes:
       - .:/var/www/html
+      - /etc/letsencrypt/live/polromp.zapto.org:/etc/letsencrypt/live/polromp.zapto.org:ro
 
   db:
     image: mysql:5.7
