@@ -16,11 +16,13 @@ services:
       dockerfile: Dockerfile.nginx
     ports:
       - "8080:80"
+      - "8443:443"
     depends_on:
       - php
     volumes:
       - .:/var/www/html
-      - /etc/letsencrypt/live/polromp.zapto.org:/etc/letsencrypt/live/polromp.zapto.org:ro
+      - /etc/letsencrypt:/etc/letsencrypt:ro
+      - /etc/ssl/certs:/etc/ssl/certs:ro
 
   db:
     image: mysql:5.7
